@@ -1,36 +1,59 @@
 <template>
-  <v-app-bar app color="primary" dark>
-    <div class="d-flex align-center">
-      <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-      />
-
-      <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-      />
-    </div>
-
-    <v-spacer></v-spacer>
-
-    <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
+  <v-card class="overflow-hidden">
+    <v-app-bar
+        absolute
+        color="#6A76AB"
+        dark
+        shrink-on-scroll
+        prominent
+        src="https://images.pexels.com/photos/6001406/pexels-photo-6001406.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+        fade-img-on-scroll
+        scroll-target="#scrolling-techniques-3"
     >
-      <span class="mr-2">Latest Release</span>
-      <v-icon>mdi-open-in-new</v-icon>
-    </v-btn>
-  </v-app-bar>
+      <template v-slot:img="{ props }">
+        <v-img
+            v-bind="props"
+            gradient="to top right, rgba(100,115,201,.7), rgba(25,32,72,.7)"
+        ></v-img>
+      </template>
+
+      <v-app-bar-nav-icon></v-app-bar-nav-icon>
+
+      <v-app-bar-title>Plovilo</v-app-bar-title>
+
+      <v-spacer></v-spacer>
+
+      <v-btn icon>
+        <v-icon>mdi-magnify</v-icon>
+      </v-btn>
+
+      <v-btn icon>
+        <v-icon>mdi-heart</v-icon>
+      </v-btn>
+
+      <v-btn icon>
+        <v-icon>mdi-dots-vertical</v-icon>
+      </v-btn>
+
+      <template v-slot:extension>
+        <v-tabs align-with-title>
+          <v-tab>Blogs</v-tab>
+          <v-tab>Sell</v-tab>
+          <v-tab>Deals</v-tab>
+          <v-tab>Home</v-tab>
+          <v-tab>About</v-tab>
+          <v-tab>account</v-tab>
+        </v-tabs>
+      </template>
+    </v-app-bar>
+    <v-sheet
+        id="scrolling-techniques-3"
+        class="overflow-y-auto"
+
+    >
+      <v-container style="height: 1000px;"></v-container>
+    </v-sheet>
+  </v-card>
 
 </template>
 
