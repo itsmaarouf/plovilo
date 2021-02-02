@@ -28,28 +28,33 @@
       </v-btn>
 
       <v-btn icon>
+        <v-icon>mdi-store</v-icon>
+      </v-btn>
+
+      <v-btn icon>
         <v-icon>mdi-heart</v-icon>
       </v-btn>
 
       <v-btn icon>
-        <v-icon>mdi-dots-vertical</v-icon>
+        <v-icon>mdi-shopping</v-icon>
+      </v-btn>
+
+      <v-btn icon>
+        <v-icon>mdi-account-circle</v-icon>
       </v-btn>
 
       <template v-slot:extension>
         <v-tabs align-with-title>
-          <v-tab>Blogs</v-tab>
-          <v-tab>Sell</v-tab>
-          <v-tab>Deals</v-tab>
           <v-tab>Home</v-tab>
+          <v-tab>Deals</v-tab>
+          <v-tab>Blogs</v-tab>
           <v-tab>About</v-tab>
-          <v-tab>account</v-tab>
         </v-tabs>
       </template>
     </v-app-bar>
     <v-sheet
         id="scrolling-techniques-3"
         class="overflow-y-auto"
-
     >
       <v-container style="height: 1000px;"></v-container>
     </v-sheet>
