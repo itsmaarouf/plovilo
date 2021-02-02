@@ -48,7 +48,7 @@
           <v-tab>Home</v-tab>
           <v-tab>Deals</v-tab>
           <v-tab>Blogs</v-tab>
-          <v-tab>About</v-tab>
+          <v-tab>About.</v-tab>
         </v-tabs>
       </template>
     </v-app-bar>
