@@ -1,5 +1,4 @@
 <template>
-  <v-card class="overflow-hidden">
     <v-app-bar
         absolute
         color="#6A76AB"
@@ -9,6 +8,7 @@
         src="https://images.pexels.com/photos/6001406/pexels-photo-6001406.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
         fade-img-on-scroll
         scroll-target="#scrolling-techniques-3"
+
     >
       <template v-slot:img="{ props }">
         <v-img
@@ -18,8 +18,6 @@
       </template>
 
       <v-app-bar-nav-icon></v-app-bar-nav-icon>
-
-      <v-app-bar-title>Plovilo</v-app-bar-title>
 
       <v-spacer></v-spacer>
 
@@ -43,22 +41,7 @@
         <v-icon>mdi-account-circle</v-icon>
       </v-btn>
 
-      <template v-slot:extension>
-        <v-tabs align-with-title>
-          <v-tab>Home</v-tab>
-          <v-tab>Deals</v-tab>
-          <v-tab>Blogs</v-tab>
-          <v-tab>About.</v-tab>
-        </v-tabs>
-      </template>
     </v-app-bar>
-    <v-sheet
-        id="scrolling-techniques-3"
-        class="overflow-y-auto"
-    >
-      <v-container style="height: 1000px;"></v-container>
-    </v-sheet>
-  </v-card>
 
 </template>
 
