@@ -4,7 +4,7 @@
         v-for="n in 24"
         :key="n"
         cols="12"
-        sm="4"
+        sm="3"
     >
       <v-card height="200"></v-card>
     </v-col>
