@@ -9,7 +9,6 @@ export default {
 name: "Deals"
 }
 </script>
-
 <style scoped>
 
 </style>

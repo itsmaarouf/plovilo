@@ -4,7 +4,9 @@
         v-for="n in 24"
         :key="n"
         cols="12"
-        sm="3"
+        lg="3"
+        md="4"
+        sm="6"
     >
       <v-card height="200"></v-card>
     </v-col>
@@ -13,7 +15,7 @@
 
 <script>
 export default {
-name: "products"
+name: "Products"
 }
 </script>
 
