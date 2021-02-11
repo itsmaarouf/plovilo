@@ -8,7 +8,6 @@
             gradient="to top right, rgba(100,115,201,.7), rgba(25,32,72,.7)"
         ></v-img>
       </template>-->
-
       <v-app-bar-nav-icon></v-app-bar-nav-icon>
 
       <v-spacer></v-spacer>
@@ -32,11 +31,8 @@
       <v-btn icon>
         <v-icon>mdi-account-circle</v-icon>
       </v-btn>
-
     </v-app-bar>
-
 </template>
-
 <script>
 export default {
 name: "AppBar"
