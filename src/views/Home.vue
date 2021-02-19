@@ -7,8 +7,8 @@
             </div>
             <!-- Provides the application the proper gutter -->
             <v-container fluid>
-                <products></products>
-                <!-- If using vue-router -->
+              <categories></categories>
+              <!-- If using vue-router -->
                 <router-view></router-view>
             </v-container>
         </v-main>
@@ -16,12 +16,12 @@
 </template>
 
 <script>
-    import Products from "../components/Products";
+    import Categories from "@/components/Categories";
 
     export default {
         name: "Home",
         components: {
-            Products,
+          Categories,
         },
     };
 </script>

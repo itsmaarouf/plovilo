@@ -1,6 +1,6 @@
 <template>
   <v-row>
-    <v-col
+<!--    <v-col
         v-for="n in 24"
         :key="n"
         cols="12"
@@ -19,32 +19,60 @@
           {{product.price}} {{product.currency}}
         </div>
       </v-card>
-    </v-col>
+    </v-col>-->
+    <v-card
+        v-for="product in getProducts"
+        :key="product.id"
+        cols="12"
+        lg="3"
+        md="4"
+        sm="6"
+        class="mx-auto my-12"
+        max-width="374"
+    >
+      <v-img
+          height="250"
+          src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
+      ></v-img>
+
+      <v-card-title>{{product.product_Name}}</v-card-title>
+
+      <!-- <v-card-text>
+         <v-row
+             align="center"
+             class="mx-0"
+         >
+           <v-rating
+               :value="4.5"
+               color="amber"
+               dense
+               half-increments
+               readonly
+               size="14"
+           ></v-rating>
+
+           <div class="grey&#45;&#45;text ml-4">
+             4.5 (413)
+           </div>
+         </v-row>
+
+         <div class="my-4 subtitle-1">
+           $ • Italian, Cafe
+         </div>
+      </v-card-text>-->
+
+    </v-card>
   </v-row>
 </template>
 
 <script>
+import {mapGetters} from 'vuex'
 export default {
 name: "Products",
-  data (){
-    return{
-      product:{
-        id:1,
-        product_Name:"product_Name1",
-        product_Photos: {
-          p_img1: `<picture> <img src="../assets/logo.png" style="width:auto;"> </picture>`
-        },
-        price: 80,
-        currency: "MAD",
-        title:"title title title",
-        isInStock: true,
-      }
-    }
-  },
   computed:{
-    Price_und_currency(){
-      return `${this.product.price}``${this.product.currency}`
-    }
+    ...mapGetters([
+        'getProducts'
+    ])
   }
 }
 </script>

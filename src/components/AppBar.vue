@@ -2,17 +2,17 @@
     <v-app-bar absolute>
         <v-app-bar-nav-icon></v-app-bar-nav-icon>
 
-        <v-btn value="Home" to="/" class="nav-btn">
+        <v-btn to="/" class="xx">
             <span>Home</span>
         </v-btn>
-        <v-btn value="blogs" to="/blogs" class="nav-btn">
-            <span>Blogs</span>
+        <v-btn to="/blogs" class="xx">
+          <span>Blogs</span>
         </v-btn>
-        <v-btn value="deals" to="/deals" class="nav-btn">
-            <span>Deals</span>
+        <v-btn  to="/deals" class="xx">
+          <span>Deals</span>
         </v-btn>
-        <v-btn value="about" to="/about" class="nav-btn">
-            <span>About</span>
+        <v-btn to="/about" class="xx">
+          <span>About</span>
         </v-btn>
 
 
@@ -45,5 +45,9 @@
     }
 </script>
 
-<style scoped>
+<style lang="stylus" scoped>
+.xx
+  margin 0px 20px
+
+
 </style>
