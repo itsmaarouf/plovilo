@@ -60,15 +60,17 @@
            $ • Italian, Cafe
          </div>
       </v-card-text>-->
-
     </v-card>
+
   </v-row>
 </template>
 
 <script>
 import {mapGetters} from 'vuex'
+
 export default {
 name: "Products",
+
   computed:{
     ...mapGetters([
         'getProducts'

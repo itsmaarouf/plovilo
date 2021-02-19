@@ -48,6 +48,5 @@
 <style lang="stylus" scoped>
 .xx
   margin 0px 20px
-
-
+  padding 20px
 </style>
