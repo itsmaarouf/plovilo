@@ -2,7 +2,6 @@
     <div id="app">
             <AppBar></AppBar>
         <router-view />
-
         <v-footer app>
             v-footer
         </v-footer>

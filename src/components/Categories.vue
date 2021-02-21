@@ -8,11 +8,11 @@
         md="4"
         sm="6"
     >
-      <!--<v-img
+      <v-img
           :src="category.category_Photos"
 
-      ></v-img>-->
-      <v-img src="https://cdn.vuetifyjs.com/images/cards/cooking.png" ></v-img>
+      ></v-img>
+<!--      <v-img src="https://cdn.vuetifyjs.com/images/cards/cooking.png" ></v-img>-->
 
       <v-card-title >{{ category.category_Name }}</v-card-title>
     </v-card>

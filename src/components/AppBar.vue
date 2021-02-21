@@ -11,16 +11,15 @@
         <v-btn  to="/deals" class="xx">
           <span>Deals</span>
         </v-btn>
-        <v-btn to="/about" class="xx">
-          <span>About</span>
-        </v-btn>
+      <v-autocomplete
+          filled
+          rounded
+          solo
+          class="homeSearch"
 
+      ></v-autocomplete>
 
         <v-spacer></v-spacer>
-
-        <v-btn icon to="/search">
-            <v-icon>mdi-magnify</v-icon>
-        </v-btn>
 
         <v-btn icon to="/store">
             <v-icon>mdi-store</v-icon>
@@ -49,4 +48,9 @@
 .xx
   margin 0px 20px
   padding 20px
+.homeSearch
+  padding 25
+  margin-top  25px
+  width 50%
+
 </style>
