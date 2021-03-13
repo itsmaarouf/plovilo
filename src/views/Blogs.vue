@@ -3,7 +3,7 @@
 
 
     <v-container fluid >
-      <div class="blogs" >
+      <div class="blogs text-center" >
         <h1 class="ma-7 ">This is an Blogs page</h1>
       </div>
 

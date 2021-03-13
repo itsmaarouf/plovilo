@@ -1,124 +1,105 @@
 <template>
-    <v-dialog
-        v-model="dialog"
-        persistent
-        max-width="600px"
-    >
-      <template v-slot:activator="{ on, attrs }">
-        <v-btn icon
-               v-bind="attrs"
-               v-on="on">
-        <v-icon
+  <v-dialog
+      transition="dialog-bottom-transition"
+      persistent
+      max-width="600"
+  >
+    <template v-slot:activator="{ on, attrs }">
 
-        >mdi-account-circle
-        </v-icon>
-        </v-btn>
-      </template>
+      <v-btn icon
+             v-bind="attrs"
+             v-on="on">
+          <v-icon>mdi-account-circle</v-icon>
+      </v-btn>
+
+    </template>
+    <template v-slot:default="dialog">
       <v-card>
+        <v-toolbar
+            color="#F2F2F2"
+            height="80"
+            class="ma-0"
+        ><span class="ma-auto ml-0 d-flex float-left text-h3 font-weight-light ">Log in</span>
+          <v-btn
+              class="ma-auto mr-0 mt-0 d-flex"
+              icon
+              @click="dialog.value = false"
+          >
+            <v-icon>mdi-close</v-icon>
+          </v-btn>
+        </v-toolbar>
+        <v-card>
+          <v-form
+              ref="form"
+              v-model="valid"
+              lazy-validation
+              class="mx-6 pa-5"
+          >
+            <v-text-field
+                v-model="email"
+                :rules="emailRules"
+                label="email"
+                required
+            ></v-text-field>
 
-        <v-card-title>
-          <span class="headline">User Profile</span>
-        </v-card-title>
-        <v-card-text>
-          <v-container>
-            <v-row>
-              <v-col
-                  cols="12"
-                  sm="6"
-                  md="4"
-              >
-                <v-text-field
-                    label="Legal first name*"
-                    required
-                ></v-text-field>
-              </v-col>
-              <v-col
-                  cols="12"
-                  sm="6"
-                  md="4"
-              >
-                <v-text-field
-                    label="Legal middle name"
-                    hint="example of helper text only on focus"
-                ></v-text-field>
-              </v-col>
-              <v-col
-                  cols="12"
-                  sm="6"
-                  md="4"
-              >
-                <v-text-field
-                    label="Legal last name*"
-                    hint="example of persistent helper text"
-                    persistent-hint
-                    required
-                ></v-text-field>
-              </v-col>
-              <v-col cols="12">
-                <v-text-field
-                    label="Email*"
-                    required
-                ></v-text-field>
-              </v-col>
-              <v-col cols="12">
-                <v-text-field
-                    label="Password*"
-                    type="password"
-                    required
-                ></v-text-field>
-              </v-col>
-              <v-col
-                  cols="12"
-                  sm="6"
-              >
-                <v-select
-                    :items="['0-17', '18-29', '30-54', '54+']"
-                    label="Age*"
-                    required
-                ></v-select>
-              </v-col>
-              <v-col
-                  cols="12"
-                  sm="6"
-              >
-                <v-autocomplete
-                    :items="['Skiing', 'Ice hockey', 'Soccer', 'Basketball', 'Hockey', 'Reading', 'Writing', 'Coding', 'Basejump']"
-                    label="Interests"
-                    multiple
-                ></v-autocomplete>
-              </v-col>
-            </v-row>
-          </v-container>
-          <small>*indicates required field</small>
-        </v-card-text>
-        <v-card-actions>
-          <v-spacer></v-spacer>
-          <v-btn
-              color="blue darken-1"
-              text
-              @click="dialog = false"
-          >
-            Close
-          </v-btn>
-          <v-btn
-              color="blue darken-1"
-              text
-              @click="dialog = false"
-          >
-            Save
-          </v-btn>
-        </v-card-actions>
+            <v-text-field
+                v-model="Password"
+                label="password"
+                required
+                :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'"
+                :rules="[rules.required, rules.min]"
+                :type="show1 ? 'text' : 'Password'"
+                name="input-10-1"
+                hint="At least 8 characters"
+                counter
+                @click:append="show1 = !show1"
+            ></v-text-field>
+
+
+            <v-checkbox
+                v-model="checkbox"
+                label="Remember me?"
+                class="d-flex float-left mt-0"
+            ></v-checkbox>
+
+            <register></register>
+
+            <v-btn
+                :disabled="!valid"
+                color="gray"
+                block
+                class="mr-4"
+                @click="validate"
+            >
+              Log in to your account
+            </v-btn>
+          </v-form>
+        </v-card>
       </v-card>
-    </v-dialog>
+    </template>
+  </v-dialog>
 </template>
 
 <script>
-    export default {
-        name: "Account",
-        data: () => ({
-            dialog: false,
-        }),
+import Register from "@/components/Register";
+export default {
+  name: "Account",
+  components: {Register},
+  data () {
+    return {
+      dialog: false,
+      valid: true,
+      show1: false,
+      show2: true,
+      Password: '',
+      rules: {
+        required: value => !!value || 'Required.',
+        min: v => v.length >= 8 || 'Min 8 characters',
+        emailMatch: () => (`The email and password you entered don't match`),
+      },
     }
+  },
+}
 </script>
 
 <style scoped>

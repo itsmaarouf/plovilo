@@ -24,25 +24,19 @@
         <v-btn icon to="/store">
             <v-icon>mdi-store</v-icon>
         </v-btn>
-
-        <v-btn icon to="/fav">
-            <v-icon>mdi-heart</v-icon>
-        </v-btn>
-
-        <v-btn icon to="/shopping">
-            <v-icon>mdi-shopping</v-icon>
-        </v-btn>
-
-<!--            <v-icon>mdi-account-circle </v-icon>-->
-          <Account></Account>
+      <wishlist></wishlist>
+      <shopping-product></shopping-product>
+      <Account></Account>
 
     </v-app-bar>
 </template>
 <script>
     import Account from "@/components/Account";
+    import ShoppingProduct from "@/components/ShoppingProduct";
+    import Wishlist from "@/components/Wishlist";
     export default {
         name: "AppBar",
-      components: {Account}
+      components: {Wishlist, ShoppingProduct, Account}
     }
 </script>
 

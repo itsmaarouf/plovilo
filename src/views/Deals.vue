@@ -1,6 +1,6 @@
 <template>
     <v-container fluid>
-      <div class="deals">
+      <div class="mt-6 deals text-center">
         <h1>This is an Deals page</h1>
       </div>
     </v-container>
