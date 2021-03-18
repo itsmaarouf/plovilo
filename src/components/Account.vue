@@ -55,14 +55,13 @@
                 @click:append="show1 = !show1"
             ></v-text-field>
 
-
             <v-checkbox
                 v-model="checkbox"
                 label="Remember me?"
                 class="d-flex float-left mt-0"
             ></v-checkbox>
 
-            <register></register>
+            <re-password></re-password>
 
             <v-btn
                 :disabled="!valid"
@@ -73,6 +72,9 @@
             >
               Log in to your account
             </v-btn>
+
+            <register></register>
+
           </v-form>
         </v-card>
       </v-card>
@@ -82,9 +84,10 @@
 
 <script>
 import Register from "@/components/Register";
+import RePassword from "@/components/rePassword";
 export default {
   name: "Account",
-  components: {Register},
+  components: {RePassword, Register},
   data () {
     return {
       dialog: false,

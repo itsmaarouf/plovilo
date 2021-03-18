@@ -1,28 +1,12 @@
 <template>
-<!--  <v-row>
-    <v-card
-        v-for="category in getCategories"
-        :key="category.id"
-        cols="12"
-        lg="3"
-        md="4"
-        sm="6"
-        class="ml-8 mb-10 mt-10"
-        width="150px"
-        height="135px"
-    >
-      <v-img
-          :src="category.category_Photos"
-      ></v-img>
-      &lt;!&ndash;      <v-card-title class="justify-center">{{ category.category_Name }}</v-card-title>&ndash;&gt;
-    </v-card>
-  </v-row>-->
-
+<v-col>
+  <h1 class="my-6 text-center">Categories</h1>
   <v-sheet
       class="mx-auto"
       elevation="8"
       max-width="100%"
   >
+    <h1></h1>
     <v-slide-group
         v-model="model"
         class="pa-4"
@@ -72,6 +56,7 @@
       </v-sheet>
     </v-expand-transition>
   </v-sheet>
+</v-col>
 
 </template>
 

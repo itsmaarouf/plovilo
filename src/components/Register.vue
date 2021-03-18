@@ -9,7 +9,7 @@
           v-bind="attrs"
           v-on="on"
           text
-          class="d-flex float-right">
+          class="d-flex mx-auto mt-6">
         or register an account
       </v-btn>
     </template>

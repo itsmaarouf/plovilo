@@ -2,13 +2,13 @@
     <v-app-bar absolute>
         <v-app-bar-nav-icon></v-app-bar-nav-icon>
 
-        <v-btn to="/" class="mx-4">
+        <v-btn to="/" class="mx-4" elevation="0">
             <span>Home</span>
         </v-btn>
-        <v-btn to="/blogs" class="mx-4">
+        <v-btn to="/blogs" class="mx-4" elevation="0">
           <span>Blogs</span>
         </v-btn>
-        <v-btn  to="/deals" class="mx-4">
+        <v-btn  to="/deals" class="mx-4" elevation="0">
           <span>Deals</span>
         </v-btn>
       <v-autocomplete
@@ -18,9 +18,6 @@
           hide-details
       ></v-autocomplete>
 
-<!--
-        <v-spacer></v-spacer>
--->
         <v-btn icon to="/store">
             <v-icon>mdi-store</v-icon>
         </v-btn>
@@ -41,12 +38,5 @@
 </script>
 
 <style lang="stylus" scoped>
-/*.xx
-  margin 0px 20px
-  padding 20px*/
-/*.homeSearch
-  padding 25
-  margin-top  25px
-  width 50%*/
 
 </style>

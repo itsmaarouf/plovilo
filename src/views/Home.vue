@@ -2,14 +2,15 @@
 
       <v-container fluid>
 
-        <div class="home">
-          <h1 class="mt-6">Categories</h1>
+        <div class="home" v-if="num===10">
+          <product-details></product-details>
+        </div>
+        <div v-else>
+          <categories></categories>
+
+          <products></products>
         </div>
 
-        <categories></categories>
-
-        <h1 class="mt-6">Products</h1>
-        <products></products>
       </v-container>
 
 </template>
@@ -17,10 +18,15 @@
 <script>
 import Categories from "@/components/Categories";
 import Products from "@/components/Products";
+import ProductDetails from "@/components/ProductDetails";
 
 export default {
   name: "Home",
+  data: () => ({
+      num:1,
+        }),
   components: {
+    ProductDetails,
     Products, Categories
   },
 };

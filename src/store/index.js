@@ -15,10 +15,8 @@ export default new Vuex.Store({
       {
         id:1,
         id_category:1,
-        product_Name:"product Name 1",
-        product_Photos: {
-          0: '<v-img src="https://picsum.photos/350/165?random"></v-img>'
-        },
+        product_Name:"Garn Pflöcke",
+        product_Photos: '/images/product/garnPfloecke.jpg',
         price: 80,
         currency: "MAD",
         description: 'this is a just not a description for this product',
@@ -26,10 +24,8 @@ export default new Vuex.Store({
       },{
         id:2,
         id_category:1,
-        product_Name:"product Name 2",
-        product_Photos: {
-          0: '<v-img src="https://picsum.photos/350/165?random" ></v-img>'
-        },
+        product_Name:"Vintage Bombe Brust",
+        product_Photos: '/images/product/VintageBombeBrust.jpg',
         price: 100,
         currency: "MAD",
         description: 'this is a just not a description for this product',
@@ -38,10 +34,8 @@ export default new Vuex.Store({
       {
         id:3,
         id_category:1,
-        product_Name:"product Name 3",
-        product_Photos: {
-          0: '<v-img src="https://picsum.photos/350/165?random"></v-img>'
-        },
+        product_Name:"Stühle von Wicker und Holz",
+        product_Photos: '/images/product/StühleVonWickerUndHolz.jpg',
         price: 20,
         currency: "MAD",
         description: 'this is a just not a description for this product',
@@ -50,10 +44,8 @@ export default new Vuex.Store({
       {
         id:4,
         id_category:2,
-        product_Name:"product Name 4",
-        product_Photos: {
-          0: '<v-img src="https://picsum.photos/350/165?random" ></v-img>'
-        },
+        product_Name:"Bespaq Belmont Kindergarten",
+        product_Photos: '/images/product/BespaqBelmontKindergarten.jpg',
         price: 50,
         currency: "MAD",
         description: 'this is a just not a description for this product',
@@ -63,9 +55,7 @@ export default new Vuex.Store({
         id:5,
         id_category:2,
         product_Name:"product Name 5",
-        product_Photos: {
-          0: '<v-img src="https://picsum.photos/350/165?random" ></v-img>'
-        },
+        product_Photos: 'https://picsum.photos/350/165?random',
         price: 60,
         currency: "MAD",
         description: 'this is a just not a description for this product',
@@ -75,9 +65,7 @@ export default new Vuex.Store({
         id:6,
         id_category:3,
         product_Name:"product Name 6",
-        product_Photos: {
-          0: '<v-img src="https://picsum.photos/350/165?random" ></v-img>'
-        },
+        product_Photos: 'https://picsum.photos/350/165?random',
         price: 70,
         currency: "MAD",
         description: 'this is a just not a description for this product',

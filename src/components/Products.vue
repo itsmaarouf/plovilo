@@ -1,4 +1,6 @@
 <template>
+  <v-col>
+    <h1 class="my-6 text-center">Products</h1>
   <v-row>
     <v-card
         v-for="product in getProducts"
@@ -8,12 +10,12 @@
         md="4"
         sm="6"
         class="mx-auto my-12"
-        max-width="374"
+        max-width="300"
     >
       <v-col v-if="product.isInStock">
         <v-img class="mb-2"
             height="250"
-            src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
+            :src="product.product_Photos"
         ></v-img>
 
         <h4 class="d-flex float-left">{{ product.product_Name }}</h4>
@@ -27,8 +29,8 @@
         </v-btn>
       </v-col>
     </v-card>
-
   </v-row>
+  </v-col>
 </template>
 
 <script>
