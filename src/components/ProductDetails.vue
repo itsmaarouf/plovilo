@@ -1,73 +1,84 @@
 <template>
-
-  <div class="mt-10">
-    <div class="d-flex float-left tmp-Left">
-      <v-card>
-        <v-card-text>hallo</v-card-text>
-        <img height="250" :src="getProduct(model).product_Photos">
+  <div class="mt-10 no-gutters">
+    <v-col cols="12"
+           sm="6"
+           md="8"
+           class="ma-auto float-left" >
+      <v-card width="550" class="mx-16 my-10 pa-5">
+        <img height="500" width="500" alt="" :src="getProduct(model).product_Photos">
       </v-card>
-    </div>
-    <div class="d-flex float-right tmp-Right">
-      <v-card class="my-3">
+    </v-col>
+    <v-col cols="6"
+           md="4"
+           class="ma-auto float-right">
+      <v-card class="my-3 mr-16 my-10 pa-5" width="400">
+        <h3><h1 class="font-weight-light">{{ getProduct(model).product_Name }}</h1></h3>
         <v-form
             ref="form"
             v-model="valid"
             lazy-validation
-            class="mx-6 pa-5 text-center"
-        >
-          <v-col>
-            <v-row class="py-5">
-              <h1>{{getProduct(model).product_Name}}</h1>
 
+        >
+          <v-col class="mx-6 pa-5">
+            <v-row class="py-3">
+              <h2>{{ getProduct(model).price }} {{ getProduct(model).currency }}</h2>
             </v-row>
-            <v-row class="py-5">
-              <h2>{{getProduct(model).price}} {{getProduct(model).currency}}</h2>
-            </v-row>
-            <v-row class="py-5">
+            <v-row class="py-3">
               <h3>Color Black</h3>
             </v-row>
-            <v-row class="py-5">
+            <v-row class="py-3">
               <h3>Size 32</h3>
             </v-row>
-            <v-row class="py-5">
+            <v-row class="py-3">
               <h3>Quantity (100 available)</h3>
             </v-row>
-            <v-row class="py-5">
+            <v-row class="py-3">
               <v-btn
                   color="gray"
                   block
+                  dark
                   class="mr-4 mb-5"
                   @click="validate"
               >
-                add to cart
+                Buy
               </v-btn>
             </v-row>
           </v-col>
-
         </v-form>
       </v-card>
+    </v-col>
+    <div class="review ma-10" >
+      <review-list v-if="reviews.length" :reviews="reviews"></review-list>
+      <review-form @review-submitted="addReview"></review-form>
     </div>
   </div>
+
 </template>
 
 <script>
 import {mapGetters} from 'vuex'
+import ReviewForm from "@/components/ReviewForm";
+import ReviewList from "@/components/reviewList";
 
 export default {
   name: "ProductDetails",
+  components: {ReviewList, ReviewForm},
   data: () => ({
-    model: 1
+    model: 1,
+    reviews: []
   }),
   computed: {
     ...mapGetters(['getProduct', 'getProducts'])
+  },
+  methods: {
+    addReview(review){
+      this.reviews.push(review)
+    }
   }
 }
 </script>
 
 <style lang="stylus" scoped>
-.tmp-Left
-  width 65%
-
-.tmp-Right
-  width 35%
+.review
+  clear both
 </style>

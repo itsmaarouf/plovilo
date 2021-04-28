@@ -11,12 +11,14 @@
 
 <script>
 
+
 import ProductDetails from "@/components/ProductDetails";
+
 export default {
 name: "Deals",
-  components: {
-    ProductDetails
-  },
+  components:{
+    ProductDetails,
+  }
 }
 </script>
 <style scoped>

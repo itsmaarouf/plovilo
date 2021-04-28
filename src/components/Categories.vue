@@ -2,14 +2,14 @@
 <v-col>
   <h1 class="my-6 text-center">Categories</h1>
   <v-sheet
-      class="mx-auto"
-      elevation="8"
+      class="mx-auto pa-0"
+      elevation="0"
       max-width="100%"
   >
     <h1></h1>
     <v-slide-group
         v-model="model"
-        class="pa-4"
+        class="pa-0"
         show-arrows
     >
       <v-slide-item
