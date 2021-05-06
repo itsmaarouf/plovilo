@@ -9,7 +9,7 @@
       <v-btn icon
              v-bind="attrs"
              v-on="on">
-          <v-icon>mdi-account-circle</v-icon>
+        <v-icon>mdi-account-circle</v-icon>
       </v-btn>
 
     </template>
@@ -66,6 +66,7 @@
             <v-btn
                 :disabled="!valid"
                 color="gray"
+                dark
                 block
                 class="mr-4"
                 @click="validate"
@@ -85,15 +86,17 @@
 <script>
 import Register from "@/components/Register";
 import RePassword from "@/components/rePassword";
+
 export default {
   name: "Account",
   components: {RePassword, Register},
-  data () {
+  data() {
     return {
       dialog: false,
       valid: true,
       show1: false,
       show2: true,
+      email: '',
       Password: '',
       rules: {
         required: value => !!value || 'Required.',

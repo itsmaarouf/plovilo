@@ -13,7 +13,7 @@
                 bordered
                 overlap
                 color="pink"
-                content="0">
+                :content="content">
               <v-icon>mdi-shopping</v-icon>
             </v-badge>
           </v-btn>
@@ -34,20 +34,52 @@
               >
                 <v-icon>mdi-close</v-icon>
               </v-btn></v-toolbar>
-            <v-card-text>
+            <v-card-text v-if="content > 0">
+              <div class="pa-2 text-center">
+                <table>
+                  <tr>
+                    <td rowspan="3"> Bild </td>
+                    <td><h3> product name </h3></td>
+                    <td><h3> price </h3></td>
+                  </tr>
+                  <tr>
+                    <td> MP04-32-Black </td>
+                    <td rowspan="2"> remove_shopping_cart </td>
+                  </tr>
+                  <tr>
+                    <td>Edit</td>
+                  </tr>
+
+                </table>
+              </div>
+            </v-card-text>
+            <v-card-text v-else>
               <div class="text-h4 pa-12 text-center">Don't hesitate and browse our catalog to find something beautiful for You!</div>
             </v-card-text>
+
           </v-card>
         </template>
       </v-dialog>
 </template>
 
 <script>
+import {mapGetters} from "vuex";
 export default {
-name: "ShoppingProduct"
+name: "ShoppingProduct",
+  data(){
+  return{
+    content: 0
+  }
+  },
+  computed:{
+  ...mapGetters(['getContent']),
+  }
 }
 </script>
 
-<style scoped>
-
+<style lang="stylus" scoped>
+table,tr,td
+  border: 1px solid black
+table
+  width 100%
 </style>
