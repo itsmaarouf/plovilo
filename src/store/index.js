@@ -5,6 +5,9 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   getters: {
+    getProductId(){ return  this.$route.params.id},
+    getAccounts: state => state.accounts,
+    getContent: state => state.content,
     getProducts: state => state.products,
     getCategories: state => state.categories,
     getProduct: state => id => state.products.find(product => product.id===id),
@@ -12,6 +15,13 @@ export default new Vuex.Store({
   },
   state: {
     todos:[],
+    content: 1,
+    accounts:[
+      {
+        Email:"admin@plovilo.com",
+        password:"@plovilo"
+      }
+    ],
     products:[
       {
         id:1,

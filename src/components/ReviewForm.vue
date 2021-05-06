@@ -29,12 +29,6 @@
       ></v-rating>
     </div>
 
-<!--    <v-btn-->
-<!--        class="mr-4"-->
-<!--        @click="submit"-->
-<!--    >-->
-<!--      submit-->
-<!--    </v-btn>-->
     <input class="button" type="submit" value="Submit">
 
   </form>

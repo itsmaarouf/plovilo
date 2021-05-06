@@ -15,10 +15,11 @@
       >
         <v-col v-if="product.isInStock"
         >
+          <router-link  :to="{ name: 'OneProduct', params: { id: product.id } }">
           <v-img class="mb-2"
                  height="250"
                  :src="product.product_Photos"
-          ></v-img>
+          ></v-img></router-link>
 
 
           <h4 class="font-weight-light">{{ product.product_Name }}</h4>
@@ -48,11 +49,6 @@ export default {
       'getProducts'
     ])
   },
-  methods:{
-    addToCart(){
-      this.$emit('add-to-cart')
-    }
-  }
 }
 </script>
 

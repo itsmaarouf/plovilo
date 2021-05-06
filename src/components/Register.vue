@@ -9,6 +9,7 @@
           v-bind="attrs"
           v-on="on"
           text
+
           class="d-flex mx-auto mt-6">
         or register an account
       </v-btn>
@@ -107,6 +108,7 @@
                 :disabled="!valid"
                 color="gray"
                 block
+                dark
                 class="mr-4 mb-5"
                 @click="validate"
             >
