@@ -63,13 +63,12 @@
 </template>
 
 
-
 <script>
 export default {
-name: "rePassword",
-  data(){
-    return{
-      email:'',
+  name: "rePassword",
+  data() {
+    return {
+      email: '',
     }
   }
 }

@@ -13,7 +13,8 @@
             bordered
             overlap
             color="pink"
-            content="0">
+            :content="wishlistContent"
+            :value="wishlistContent">
           <v-icon>mdi-heart</v-icon>
         </v-badge>
       </v-btn>
@@ -44,8 +45,12 @@
 </template>
 
 <script>
+import {mapState} from 'vuex'
 export default {
-name: "Wishlist"
+name: "Wishlist",
+  computed:{
+  ...mapState(['wishlistContent'])
+  }
 }
 </script>
 

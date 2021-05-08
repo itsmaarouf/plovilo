@@ -1,37 +1,40 @@
 <template>
-  <form width="500" class="review-form" @submit.prevent="onsubmit()">
-    <h3>Leave a review</h3>
-    <v-text-field
-        v-model="Name"
-        label="Name"
-        id="Name"
-        required
-    ></v-text-field>
-    <v-text-field
-        v-model="Review"
-        label="Review"
-        id="Review"
-        required
-    ></v-text-field>
-    <div class="mb-5">
+  <v-col order="1">
+    <v-card
+        class="pa-5">
+      <form class="review-form" @submit.prevent="onsubmit()">
+        <h3>Leave a review</h3>
+        <v-text-field
+            v-model="Name"
+            label="Name"
+            id="Name"
+            required
+        ></v-text-field>
+        <v-text-field
+            v-model="Review"
+            label="Review"
+            id="Review"
+            required
+        ></v-text-field>
+        <div class="mb-5">
      <span class="grey--text text-lg-h6 caption mr-2">
         ({{ rating }})
       </span>
-      <v-rating
-          class="d-inline"
-          v-model="rating"
-          background-color="white"
-          color="yellow accent-4"
-          dense
-          half-increments
-          hover
-          size="28"
-      ></v-rating>
-    </div>
-
-    <input class="button" type="submit" value="Submit">
-
-  </form>
+          <v-rating
+              class="d-inline"
+              v-model="rating"
+              background-color="white"
+              color="yellow accent-4"
+              dense
+              half-increments
+              hover
+              size="28"
+          ></v-rating>
+        </div>
+        <v-btn outlined color="#009688" type="submit">Submit</v-btn>
+      </form>
+    </v-card>
+  </v-col>
 </template>
 
 <script>
@@ -42,8 +45,8 @@ export default {
     Name: '',
     Review: '',
   }),
-  methods:{
-    onsubmit(){
+  methods: {
+    onsubmit() {
       let productReview = {
         Name: this.Name,
         Review: this.Review,

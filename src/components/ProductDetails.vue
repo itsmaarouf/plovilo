@@ -1,6 +1,7 @@
 <template>
   <div class="mt-10 no-gutters">
     <v-col cols="12"
+           lg="6"
            sm="6"
            md="8"
            class="ma-auto float-left">
@@ -15,9 +16,7 @@
         <h1><strong class="font-weight-light">{{ getProduct(productId).product_Name }}</strong></h1>
         <v-form
             ref="form"
-            v-model="valid"
             lazy-validation
-
         >
           <v-col class="mx-6 pa-5">
             <v-row class="py-3">
@@ -49,6 +48,9 @@
     </v-col>
     <div class="review ma-10">
       <review-list v-if="reviews.length" :reviews="reviews"></review-list>
+      <v-divider
+          vertical
+      ></v-divider>
       <review-form @review-submitted="addReview"></review-form>
     </div>
   </div>
@@ -74,8 +76,9 @@ export default {
     addReview(review) {
       this.reviews.push(review)
     },
-    buyNow(){
-
+    buyNow() {
+      alert('add to Shopping cart successful')
+      console.log(this.productId)
     }
   }
 }

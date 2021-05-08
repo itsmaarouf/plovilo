@@ -10,16 +10,17 @@
           md="4"
           sm="6"
           class="mx-auto my-12"
-          max-width="300"
+          width="300"
           elevation="0"
       >
         <v-col v-if="product.isInStock"
         >
-          <router-link  :to="{ name: 'OneProduct', params: { id: product.id } }">
-          <v-img class="mb-2"
-                 height="250"
-                 :src="product.product_Photos"
-          ></v-img></router-link>
+          <router-link :to="{ name: 'OneProduct', params: { id: product.id } }">
+            <v-img class="mb-2"
+                   height="250"
+                   :src="product.product_Photos"
+            ></v-img>
+          </router-link>
 
 
           <h4 class="font-weight-light">{{ product.product_Name }}</h4>
@@ -49,6 +50,11 @@ export default {
       'getProducts'
     ])
   },
+  methods: {
+    addToCart() {
+      alert('add to cart successful')
+    }
+  }
 }
 </script>
 

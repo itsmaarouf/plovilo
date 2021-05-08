@@ -50,13 +50,13 @@
                   sm="6"
                   class="mx-0 px-3 d-flex float-right"
               >
-            <v-text-field
-                v-model="fistName"
-                :rules="firstNameRules"
-                label="First name*"
-                required
-                class="d-flex float-left"
-            ></v-text-field>
+                <v-text-field
+                    v-model="fistName"
+                    :rules="firstNameRules"
+                    label="First name*"
+                    required
+                    class="d-flex float-left"
+                ></v-text-field>
               </v-col>
 
               <v-col
@@ -64,12 +64,12 @@
                   sm="6"
                   class="mx-0 px-3 d-flex float-right"
               >
-            <v-text-field
-                v-model="lastName"
-                :rules="lastNameRules"
-                label="Last name*"
-                required
-            ></v-text-field>
+                <v-text-field
+                    v-model="lastName"
+                    :rules="lastNameRules"
+                    label="Last name*"
+                    required
+                ></v-text-field>
               </v-col>
             </v-row>
 
@@ -115,9 +115,10 @@
               Register an account
             </v-btn>
 
-            <spam  @click="dialog.value = false"
-                class="font-weight-bold pointer"
-            >or login to your account</spam>
+            <spam @click="dialog.value = false"
+                  class="font-weight-bold pointer"
+            >or login to your account
+            </spam>
 
           </v-form>
         </v-card>
@@ -127,12 +128,10 @@
 </template>
 
 
-
-
 <script>
 export default {
   name: "Register",
-  data () {
+  data() {
     return {
       show1: false,
       show2: true,
