@@ -1,17 +1,17 @@
 <template>
 
     <v-container fluid>
-        <deal></deal>
+      <deal-details></deal-details>
     </v-container>
 
 </template>
 
 <script>
 
-import Deal from "@/components/Deal";
+import DealDetails from "@/components/DealDetails";
 export default {
 name: "Deals",
-  components: {Deal},
+  components: {DealDetails},
 }
 </script>
 <style scoped>

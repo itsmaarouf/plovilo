@@ -52,7 +52,6 @@
               <tr>
                 <td>Edit</td>
               </tr>
-
             </table>
           </div>
         </v-card-text>
@@ -61,7 +60,6 @@
             You!
           </div>
         </v-card-text>
-
       </v-card>
     </template>
   </v-dialog>

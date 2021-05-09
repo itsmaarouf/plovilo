@@ -311,31 +311,15 @@ export default new Vuex.Store({
             },
         ],
         deals: [
-            {
-                id:1,
-                dealName: 'Mothers Gift',
-                dealColor: 'redsmocke',
-            }, {
-                id:2,
-                dealName: 'Fathers Gift',
-                dealColor: 'brown',
-            }, {
-                id:3,
-                dealName: 'Sisters Gift',
-                dealColor: 'pink',
-            }, {
-                id:4,
-                dealName: 'Brothers Gift',
-                dealColor: 'blue',
-            }, {
-                id:5,
-                dealName: 'Grandfather Gift',
-                dealColor: '#443F64',
-            }, {
-                id:6,
-                dealName: 'Grandmother Gift',
-                dealColor: '#EEA212',
-            },],
+            {id:1, dealName: 'Mothers', dealColor: {backgrond: 'redsmocke'}},
+            {id:2, dealName: 'Fathers', dealColor: 'brown'},
+            {id:3, dealName: 'Sisters', dealColor: 'pink'},
+            {id:4, dealName: 'Brothers', dealColor: 'blue'},
+            {id:5, dealName: 'Grandfather', dealColor: '#443F64'},
+            {id:6, dealName: 'Grandmother', dealColor: '#EEA212'},
+            {id:7, dealName: 'Dogs', dealColor: '#684b0b'},
+            {id:8, dealName: 'Cats', dealColor: '#ff7f61'},
+        ],
     },
     mutations: {},
     actions: {},
