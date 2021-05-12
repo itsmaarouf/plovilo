@@ -9,8 +9,9 @@
            lg="3"
            md="4"
            sm="6">
-      <v-card>
-        <v-card-title class="blue--text">{{deal.dealName}}</v-card-title>
+      <v-card to="#">
+        <v-card-title class="blue--text d-inline" >{{deal.dealName}}</v-card-title>
+        <v-img :src="deal.dealAvatar" width="70px" class="float-right" ></v-img>
       </v-card>
     </v-col>
   </v-row>

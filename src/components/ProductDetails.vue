@@ -31,16 +31,21 @@
             <v-row class="py-3">
               <h3>Quantity (100 available) </h3>
             </v-row>
+
             <v-row class="py-3">
-              <v-btn
-                  color="gray"
-                  block
-                  dark
-                  class="mr-4 mb-5"
-                  @click="buyNow"
-              >
-                Buy
-              </v-btn>
+                <v-btn icon class="mr-6 d-inline" :color="!colorIf? 'red': 'gray'" @click="colorIf = !colorIf">
+                  <v-icon >mdi-heart</v-icon>
+                </v-btn>
+
+                <v-btn
+                    color="gray"
+                    dark
+                    class="mr-4 mb-5"
+                    @click="buyNow"
+                >
+                  Buy
+                </v-btn>
+
             </v-row>
           </v-col>
         </v-form>
@@ -67,7 +72,9 @@ export default {
   components: {ReviewList, ReviewForm},
   props: ['productId'],
   data: () => ({
-    reviews: []
+    reviews: [],
+    colorIcon: 'red',
+    colorIf: true,
   }),
   computed: {
     ...mapGetters(['getProduct', 'getProducts'])

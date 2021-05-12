@@ -3,27 +3,46 @@
       <v-container fluid>
 
         <div>
-          <categories></categories>
-          <products></products>
+<!--          <categories></categories>-->
+          <Carousel></Carousel>
+
+          <v-row class="mt-1">
+            <v-col class="mt-6"
+                   cols="12"
+                   md="3"
+            >
+              <v-card elevation="0"><filter-products></filter-products>
+              </v-card>
+            </v-col>
+
+            <v-col class="mt-3"
+                cols="12"
+                   md="9">
+              <v-card elevation="0"><Products></Products></v-card>
+            </v-col>
+          </v-row>
+
         </div>
+
+        <pagination></pagination>
 
       </v-container>
 
 </template>
 
 <script>
-import Categories from "@/components/Categories";
+import Carousel from "@/components/Carousel";
 import Products from "@/components/Products";
+import FilterProducts from "@/components/FilterProducts";
+import Pagination from "@/components/Pagination";
 
 export default {
   name: "Home",
   components: {
-    Products, Categories
-  },
-  methods: {
-    updateCart(){
-      this.elevation +=1
-    }
+    Pagination,
+    FilterProducts,
+    Products,
+    Carousel,
   }
 };
 </script>

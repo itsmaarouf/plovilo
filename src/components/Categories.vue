@@ -4,7 +4,6 @@
     <v-sheet
         class="mx-auto pa-0"
         elevation="0"
-        max-width="100%"
     >
       <h1></h1>
       <v-slide-group
@@ -19,8 +18,8 @@
         >
           <v-card
               class="ma-4"
-              height="270"
-              width="300"
+              height="110"
+              width="120"
               @click="toggle"
           >
             <v-row
@@ -28,10 +27,11 @@
                 align="center"
                 justify="center"
             >
-              <v-scale-transition>
+              <v-scale-transition >
                 <v-img
                     :src="category.category_Photos"
                 ></v-img>
+                <v-card-title>gg</v-card-title>
               </v-scale-transition>
             </v-row>
           </v-card>

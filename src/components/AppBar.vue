@@ -7,7 +7,7 @@
       <span>Home</span>
     </v-btn>
     <v-btn to="/deals" class="mx-4" elevation="0">
-      <span>Deals</span>
+      <span>Gifts</span>
     </v-btn>
     <v-autocomplete
         filled
