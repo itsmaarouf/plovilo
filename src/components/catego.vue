@@ -3,8 +3,8 @@
     <v-row >
       <v-col v-for="category in getCategories"
              :key="category.id">
-        <v-card to="#"  width="150">
-          <v-img :src="category.category_Photos" :alt="category.category_Name" class="float-left"></v-img>
+        <v-card to="#" v-if="category.isExist" width="200px" elevation="0" height="30px">
+          <v-card-subtitle class="text-center v-alert__border--bottom my-0 text-body-2" >{{category.category_Name}}</v-card-subtitle>
         </v-card>
       </v-col>
     </v-row>

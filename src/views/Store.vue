@@ -24,13 +24,44 @@
       </v-card>
     </v-row>
 
+    <v-row class="d-flex ">
+      <v-col v-for="stores in getStoress"
+             :key="stores.id"
+             cols="12"
+             lg="3"
+             md="4"
+             sm="6"
+             class="ma-auto">
+        <v-card elevation="0" class="mb-8">
+          <v-img :src="stores.storeImg" width="100px"></v-img>
+          <v-card-title>{{ stores.storeTitle }}</v-card-title>
+          <p>{{ stores.storeBody }}</p>
+        </v-card>
+      </v-col>
+    </v-row>
+    <v-row class="d-flex">
+      <v-col class="ma-auto my-8" >
+        <v-card elevation="0" class="ma-auto" width="70%">
+          <h1 class="text-center text-h2 my-3">Website solutions to fit your business.</h1>
+          <h5 class="text-center text-h4 font-weight-light">Build your retail store online to start selling products fast. Create a
+            restaurant website, take online orders and offer curbside pickup or
+            delivery. Provide online appointment booking for services you may be
+            delivering remotely. Even accept donations or membership fees online.</h5>
+        </v-card>
+      </v-col>
+    </v-row>
+
   </v-container>
 
 </template>
 
 <script>
+import {mapGetters} from "vuex"
 export default {
-  name: "Store"
+  name: "Store",
+  computed:{
+    ...mapGetters(["getStoress"])
+  }
 }
 </script>
 

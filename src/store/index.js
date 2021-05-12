@@ -10,6 +10,7 @@ export default new Vuex.Store({
             return this.$route.params.id
         },
         getAccounts: state => state.accounts,
+        getStoress: state => state.store,
         getCarousels: state => state.carousel,
         getProducts: state => state.products,
         getDeals: state => state.deals,
@@ -272,8 +273,8 @@ export default new Vuex.Store({
             {id: 4, category_Name: "Home Decor", category_Photos: '/images/category/HomeDecor.png', isExist: true,},
             {id: 5, category_Name: "Jewelry", category_Photos: '/images/category/Jewelry.jpg', isExist: true,},
             {id: 6, category_Name: "Kitchen & Dining", category_Photos: '/images/category/Kitchen&Dining.jpg', isExist: true,},
-            {id: 7, category_Name: "Stationery & Party Supplies", category_Photos: '/images/category/Stationery&Party_Supplies.jpg', isExist: true,},
-            {id: 8, category_Name: "Toys & Games",category_Photos: "/images/category/Toys&Games.jpg",isExist: true,},
+            {id: 7, category_Name: "Stationery & Party Supplies", category_Photos: '/images/category/Stationery&Party_Supplies.jpg', isExist: false,},
+            {id: 8, category_Name: "Toys & Games",category_Photos: "/images/category/Toys&Games.jpg",isExist: false,},
         ],
         deals: [
             {id:1, dealName: 'Mothers', dealAvatar:'/images/avatars/mama.png' },
@@ -293,6 +294,23 @@ export default new Vuex.Store({
             {id:5, carousel_Img: '/images/carousel/cover-5.png'},
             {id:6, carousel_Img: '/images/carousel/cover-5.png'},
         ],
+        store:[
+            {
+                id:1,
+                storeImg:'/images/store/cart.svg',
+                storeTitle:'Start selling online',
+                storeBody:'Easily sell online and ship orders to customers, offer curbside pickup, or local delivery—no matter what type of business you have.'},
+            {
+                id:2,
+                storeImg:'/images/store/no-strings.svg',
+                storeTitle:'Launch for no monthly fee',
+                storeBody:'Be in business now for free. Only pay when you make a sale—2.9% + 30¢ per transaction. Or move to a paid plan for more advanced features.'},
+            {
+                id:3,
+                storeImg:'/images/store/launch.svg',
+                storeTitle:'Get set up fast',
+                storeBody:'You can create and publish your online store quickly. With the help of our site builder, you don’t need to know how to code. And your site will work well on any device.'},
+        ]
     },
     mutations: {},
     actions: {},

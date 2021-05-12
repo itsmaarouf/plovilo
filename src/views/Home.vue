@@ -3,7 +3,7 @@
       <v-container fluid>
 
         <div>
-<!--          <categories></categories>-->
+          <catego></catego>
           <Carousel></Carousel>
 
           <v-row class="mt-1">
@@ -35,10 +35,12 @@ import Carousel from "@/components/Carousel";
 import Products from "@/components/Products";
 import FilterProducts from "@/components/FilterProducts";
 import Pagination from "@/components/Pagination";
+import Catego from "@/components/catego";
 
 export default {
   name: "Home",
   components: {
+    Catego,
     Pagination,
     FilterProducts,
     Products,
