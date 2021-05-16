@@ -43,6 +43,7 @@
       <v-col class="ma-auto my-8" >
         <v-card elevation="0" class="ma-auto" width="70%">
           <h1 class="text-center text-h2 my-3">Website solutions to fit your business.</h1>
+          <v-divider class="mb-5"></v-divider>
           <h5 class="text-center text-h4 font-weight-light">Build your retail store online to start selling products fast. Create a
             restaurant website, take online orders and offer curbside pickup or
             delivery. Provide online appointment booking for services you may be

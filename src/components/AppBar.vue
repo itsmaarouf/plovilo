@@ -9,6 +9,9 @@
     <v-btn to="/deals" class="mx-4" elevation="0">
       <span>Gifts</span>
     </v-btn>
+    <v-btn to="/contact" class="mx-4" elevation="0">
+      <span>contact</span>
+    </v-btn>
     <v-autocomplete
         filled
         rounded

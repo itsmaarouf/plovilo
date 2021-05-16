@@ -84,6 +84,7 @@
 </template>
 
 <script>
+import {mapGetters} from "vuex"
 import Register from "@/components/Register";
 import RePassword from "@/components/rePassword";
 
@@ -105,6 +106,19 @@ export default {
       },
     }
   },
+  computed:{
+    ...mapGetters(["getAccounts"])
+  },
+  methods:{
+    validate(){
+      if (this.email === 'admin@plovilo.com' && this.Password === '@plovilo'){
+        alert('welcome to Plovido')
+      }else {
+        alert('email or password incorrect')
+      }
+
+    }
+  }
 }
 </script>
 

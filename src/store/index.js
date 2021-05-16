@@ -24,6 +24,7 @@ export default new Vuex.Store({
         wishlistContent: 0,
         accounts: [
             {
+                id: 1,
                 Email: "admin@plovilo.com",
                 password: "@plovilo"
             }
@@ -267,49 +268,77 @@ export default new Vuex.Store({
             },
         ],
         categories: [
-            {id: 1, category_Name: "Beauty & Grooming", category_Photos: '/images/category/Beauty&Grooming.jpg', isExist: true,},
-            {id: 2, category_Name: "Clothing & Accessories", category_Photos: '/images/category/Clothing&Accessories.jpg ', isExist: true,},
-            {id: 3, category_Name: "Handbags Totes", category_Photos: '/images/category/Handbags_Totes.jpg', isExist: true,},
+            {
+                id: 1,
+                category_Name: "Beauty & Grooming",
+                category_Photos: '/images/category/Beauty&Grooming.jpg',
+                isExist: true,
+            },
+            {
+                id: 2,
+                category_Name: "Clothing & Accessories",
+                category_Photos: '/images/category/Clothing&Accessories.jpg ',
+                isExist: true,
+            },
+            {
+                id: 3,
+                category_Name: "Handbags Totes",
+                category_Photos: '/images/category/Handbags_Totes.jpg',
+                isExist: true,
+            },
             {id: 4, category_Name: "Home Decor", category_Photos: '/images/category/HomeDecor.png', isExist: true,},
             {id: 5, category_Name: "Jewelry", category_Photos: '/images/category/Jewelry.jpg', isExist: true,},
-            {id: 6, category_Name: "Kitchen & Dining", category_Photos: '/images/category/Kitchen&Dining.jpg', isExist: true,},
-            {id: 7, category_Name: "Stationery & Party Supplies", category_Photos: '/images/category/Stationery&Party_Supplies.jpg', isExist: false,},
-            {id: 8, category_Name: "Toys & Games",category_Photos: "/images/category/Toys&Games.jpg",isExist: false,},
+            {
+                id: 6,
+                category_Name: "Kitchen & Dining",
+                category_Photos: '/images/category/Kitchen&Dining.jpg',
+                isExist: true,
+            },
+            {
+                id: 7,
+                category_Name: "Stationery & Party Supplies",
+                category_Photos: '/images/category/Stationery&Party_Supplies.jpg',
+                isExist: false,
+            },
+            {id: 8, category_Name: "Toys & Games", category_Photos: "/images/category/Toys&Games.jpg", isExist: false,},
         ],
         deals: [
-            {id:1, dealName: 'Mothers', dealAvatar:'/images/avatars/mama.png' },
-            {id:2, dealName: 'Fathers', dealAvatar: '/images/avatars/Father.gif'},
-            {id:3, dealName: 'Sisters', dealAvatar: '/images/avatars/sister.gif'},
-            {id:4, dealName: 'Brothers', dealAvatar: '/images/avatars/Brother.gif'},
-            {id:5, dealName: 'Grandfather', dealAvatar: '/images/avatars/grandfather.jpg'},
-            {id:6, dealName: 'Grandmother', dealAvatar: '/images/avatars/grandmother.jpg'},
-            {id:7, dealName: 'Dogs', dealAvatar: '/images/avatars/dog.jpg'},
-            {id:8, dealName: 'Cats', dealAvatar: '/images/avatars/cat.jpg'},
+            {id: 1, dealName: 'Mothers', dealAvatar: '/images/avatars/mama.png'},
+            {id: 2, dealName: 'Fathers', dealAvatar: '/images/avatars/Father.gif'},
+            {id: 3, dealName: 'Sisters', dealAvatar: '/images/avatars/sister.gif'},
+            {id: 4, dealName: 'Brothers', dealAvatar: '/images/avatars/Brother.gif'},
+            {id: 5, dealName: 'Grandfather', dealAvatar: '/images/avatars/grandfather.jpg'},
+            {id: 6, dealName: 'Grandmother', dealAvatar: '/images/avatars/grandmother.jpg'},
+            {id: 7, dealName: 'Dogs', dealAvatar: '/images/avatars/dog.jpg'},
+            {id: 8, dealName: 'Cats', dealAvatar: '/images/avatars/cat.jpg'},
         ],
         carousel: [
-            {id:1, carousel_Img:'/images/carousel/cover-1.png' },
-            {id:2, carousel_Img: '/images/carousel/cover-2.png'},
-            {id:3, carousel_Img: '/images/carousel/cover-3.png'},
-            {id:4, carousel_Img: '/images/carousel/cover-4.png'},
-            {id:5, carousel_Img: '/images/carousel/cover-5.png'},
-            {id:6, carousel_Img: '/images/carousel/cover-5.png'},
+            {id: 1, carousel_Img: '/images/carousel/cover-1.png'},
+            {id: 2, carousel_Img: '/images/carousel/cover-2.png'},
+            {id: 3, carousel_Img: '/images/carousel/cover-3.png'},
+            {id: 4, carousel_Img: '/images/carousel/cover-4.png'},
+            {id: 5, carousel_Img: '/images/carousel/cover-5.png'},
+            {id: 6, carousel_Img: '/images/carousel/cover-5.png'},
         ],
-        store:[
+        store: [
             {
-                id:1,
-                storeImg:'/images/store/cart.svg',
-                storeTitle:'Start selling online',
-                storeBody:'Easily sell online and ship orders to customers, offer curbside pickup, or local delivery—no matter what type of business you have.'},
+                id: 1,
+                storeImg: '/images/store/cart.svg',
+                storeTitle: 'Start selling online',
+                storeBody: 'Easily sell online and ship orders to customers, offer curbside pickup, or local delivery—no matter what type of business you have.'
+            },
             {
-                id:2,
-                storeImg:'/images/store/no-strings.svg',
-                storeTitle:'Launch for no monthly fee',
-                storeBody:'Be in business now for free. Only pay when you make a sale—2.9% + 30¢ per transaction. Or move to a paid plan for more advanced features.'},
+                id: 2,
+                storeImg: '/images/store/no-strings.svg',
+                storeTitle: 'Launch for no monthly fee',
+                storeBody: 'Be in business now for free. Only pay when you make a sale—2.9% + 30¢ per transaction. Or move to a paid plan for more advanced features.'
+            },
             {
-                id:3,
-                storeImg:'/images/store/launch.svg',
-                storeTitle:'Get set up fast',
-                storeBody:'You can create and publish your online store quickly. With the help of our site builder, you don’t need to know how to code. And your site will work well on any device.'},
+                id: 3,
+                storeImg: '/images/store/launch.svg',
+                storeTitle: 'Get set up fast',
+                storeBody: 'You can create and publish your online store quickly. With the help of our site builder, you don’t need to know how to code. And your site will work well on any device.'
+            },
         ]
     },
     mutations: {},
